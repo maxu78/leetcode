@@ -26,12 +26,12 @@ package algorithm;
 public class ZigZagConversion {
 
     /**
-     * 
+     *
      * @param str
      * @param rows
      * @return
      */
-    public static String solution1(String str, int rows) {
+    public static String solution(String str, int rows) {
         int interval = 2 * (rows - 1);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < rows; i++) {
@@ -49,7 +49,7 @@ public class ZigZagConversion {
     public static void main(String[] args) {
         String str = "PAYPALISHIRING";
         int rows = 2;
-        String s = ZigZagConversion.solution1(str, rows);
+        String s = ZigZagConversion.solution(str, rows);
         System.out.println(s);
     }
 }
