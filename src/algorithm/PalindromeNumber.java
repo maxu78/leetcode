@@ -44,7 +44,7 @@ public class PalindromeNumber {
     }
 
     public static void main(String[] args) {
-        int num = 312213;
+        int num = 3120213;
         boolean result = PalindromeNumber.solution(num);
         System.out.println(result);
     }
