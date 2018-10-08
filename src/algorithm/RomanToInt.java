@@ -46,16 +46,17 @@ public class RomanToInt {
 
     public static int solution(String s) {
         //初始化
-        Map<String, Integer> map = new HashMap(){{
-            put("I", 1);
-            put("V", 5);
-            put("X", 10);
-            put("L", 50);
-            put("C", 100);
-            put("D", 500);
-            put("M", 1000);
+        Map<Character, Integer> map = new HashMap(){{
+            put('I', 1);
+            put('V', 5);
+            put('X', 10);
+            put('L', 50);
+            put('C', 100);
+            put('D', 500);
+            put('M', 1000);
         }};
 
+        char ss = s.charAt(s.length() - 1);
         int sum = map.get(s.charAt(s.length() - 1));
 
         for (int i = s.length() - 2; i >= 0; i--) {
@@ -72,7 +73,7 @@ public class RomanToInt {
     }
 
     public static void main(String[] args) {
-        String s = "IV";
+        String s = "V";
         int num = RomanToInt.solution(s);
         System.out.println(num);
     }
